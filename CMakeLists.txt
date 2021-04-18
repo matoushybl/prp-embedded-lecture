@@ -5,10 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
 add_subdirectory(libs)
-
 include_directories(include)
-
-add_library(project_shared STATIC src/UDPSocket.cpp src/Robot.cpp include/Robot.h)
+add_library(project_shared STATIC src/UDPSocket.cpp src/Robot.cpp)
 target_link_libraries(project_shared spdlog)
 
 add_executable(prp_lecture_embedded src/main.cpp)
